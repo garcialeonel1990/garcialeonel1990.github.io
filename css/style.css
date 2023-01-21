@@ -1,16 +1,10 @@
-header {
-    background: red;
-}
-section {
- background: blue;
-}
-nav {
-background: pink;
-}
-footer {
-background: green;
-}
+
 body {
-    background: grey;
+    background:#191528;
+    color: white;
+}
+
+#url_logo{
+    color:grey;
 }
 
