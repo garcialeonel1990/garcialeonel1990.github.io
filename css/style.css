@@ -2,9 +2,69 @@
 body {
     background:#191528;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+    display:block;
+    margin:auto;
 }
 
 #url_logo{
     color:grey;
+    text-align: center;
+     
+
 }
 
+#redes{
+    display: inline;
+}
+
+nav {
+    text-align: center;
+}
+
+
+
+.icon{
+    width: 50px;
+    height: 50px;
+}
+
+
+#description {
+    color: green;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    /*letter-spacing: 1px;*/
+}
+
+.btn{
+    
+   
+    font-size: 30px;
+    background: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+#botones{
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+#copyright{
+    text-align: center;
+}
