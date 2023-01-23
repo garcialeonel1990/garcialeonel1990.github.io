@@ -1,6 +1,6 @@
 
 body {
-    background:#5051c9;
+    background:#6bbac6;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -15,7 +15,7 @@ body {
 }
 
 #url_logo{
-    color:white;
+    color:#5a3159;
     font-size: 12px;
     text-align: center;
     margin-top: 5px;
@@ -57,7 +57,7 @@ div{
 
 
 #description {
-    color: white;
+    color: #5a3159;
     font-size: 15px;
     line-height: 20px;
     text-align: center;
@@ -71,9 +71,9 @@ div{
     color: black;
     padding: 5px;
     text-decoration: none;
-    border: 2px solid black;
+    border: 2px solid #5a3159;
     border-radius: 1px;
-    box-shadow: -4px 4px 0 black;
+    box-shadow: -4px 4px 0 #5a3159;
 }
 
 #botones{
