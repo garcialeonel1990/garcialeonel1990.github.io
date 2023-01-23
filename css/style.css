@@ -1,6 +1,6 @@
 
 body {
-    background:#191528;
+    background:#5051c9;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -15,46 +15,65 @@ body {
 }
 
 #url_logo{
-    color:grey;
+    color:white;
+    font-size: 12px;
     text-align: center;
-     
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid white;*/
+    text-align: center;
+    /*padding: 1px;*/
+    
 
 }
 
 #redes{
     display: inline;
+    margin:0 3px;
+    text-decoration: none;
 }
 
-nav {
-    text-align: center;
+div{
+    /*border: solid 3px white;*/
+    display:block;
+    margin:auto;
 }
+
 
 
 
 .icon{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    
 }
 
 
 #description {
-    color: green;
+    color: white;
     font-size: 15px;
     line-height: 20px;
     text-align: center;
+    margin: 10px 20px 20px 20px;
     /*letter-spacing: 1px;*/
 }
 
 .btn{
-    
-   
-    font-size: 30px;
-    background: black;
-    color: white;
+    font-size: 15px;
+    background:white;
+    color: black;
     padding: 5px;
     text-decoration: none;
-    border-radius: 5px;
-
+    border: 2px solid black;
+    border-radius: 1px;
+    box-shadow: -4px 4px 0 black;
 }
 
 #botones{
@@ -67,4 +86,9 @@ nav {
 
 #copyright{
     text-align: center;
+}
+
+
+hr{
+ margin:5px;
 }
