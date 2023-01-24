@@ -2,23 +2,27 @@
 body {
     background:#6bbac6;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     
 }
 
 #logo{
-    width: 100px;
-    height: 100px;
+
+    width: 200px;
+    height: 200px;
     display:block;
-    margin:auto;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    border: 2px solid white;
 }
 
 #url_logo{
     color:#5a3159;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -55,6 +59,9 @@ div{
     
 }
 
+#cuerpo{
+    margin-bottom: 80px;
+}
 
 #description {
     color: #5a3159;
@@ -69,7 +76,7 @@ div{
     font-size: 15px;
     background:white;
     color: black;
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
     border: 2px solid #5a3159;
     border-radius: 1px;
@@ -82,13 +89,21 @@ div{
     line-height: 50px;
 }
 
+li {
+margin-bottom: 10px;
+}
 
 
 #copyright{
+    color: #5a3159;
     text-align: center;
+    font-size: 14px;
+    margin: auto;
 }
 
 
 hr{
- margin:5px;
+    background-color: #5a3159;
+    margin-left: 10px;
+    margin-right: 10px;
 }
