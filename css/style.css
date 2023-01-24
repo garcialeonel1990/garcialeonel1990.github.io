@@ -103,7 +103,9 @@ margin-bottom: 10px;
 
 
 hr{
+    height: 1px;
     background-color: #5a3159;
+    border: none;
     margin-left: 10px;
     margin-right: 10px;
 }
