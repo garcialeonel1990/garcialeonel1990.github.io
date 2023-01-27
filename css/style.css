@@ -73,7 +73,7 @@ div{
     margin-bottom: 40px;
 }
 
-.btn li a {
+.btn li a, .btn li a:visited{
     font-size: 15px;
     background:white;
     color: black;
