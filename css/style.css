@@ -78,19 +78,22 @@ div{
     background:white;
     color: black;
     padding: 10px;
-    /* display: block;  */
     text-decoration: none;
     border: 2px solid #5a3159;
     border-radius: 1px;
     box-shadow: -4px 4px 0 #5a3159;
 }
 
+
+footer{
+    margin-top: 100px;
+}
+
 hr{
     height: 1px;
     background-color: #5a3159;
     border: 0;
-    margin-top: 100px;
-    max-width: 80%;
+ 
 }
 
 .copyright{
