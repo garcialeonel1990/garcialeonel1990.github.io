@@ -1,29 +1,264 @@
-.busqueda{
-display: flex;
-flex-direction: column;  
-
-
-width:561px;
-height: 44px;
-border-radius:30px;
-border:1px solid #dcdcdc;
-background: red;
+body {
+    background:#FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-section{
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
 
-    display: flex;
-    justify-content: center;
+header {
+ 
+  font-weight: 400;
+  height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 12px;
+  margin-right: 18px;
+}
+
+header a{
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: middle;
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(0,0,0,.87);
+}
+
+.head-gmail{
+  padding: 0px 9px 0px 0px;
+
+
+}
+
+
+.head-img{
+
+  padding: 0px 23px 0px 0px;
+  
+
+}
+
+
+.head-gmail:hover, .head-gmail:visited {
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,.87);
+}
+
+.head-img:hover, .head-img:visited {
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,.87);
+}
+
+
+header svg{
+fill: #5f6368;
+  height: 24px;
+  width: 24px;
+  /* padding: 0px 15px 0px 0px; */
+  /* margin-right: 15px; */
+}
+
+.btn-milka:hover, .btn-milka:visited {
+ 
+  background-color: #F0F0F0;
+/* padding:5px; */
+/* margin: 5px; */
+
+  /* border: 5px  rgba(95,99,104,.24) ; */
+  border:6px solid #F0F0F0;
+  border-radius: 50%;
+
+  
+}
+
+
+
+.btn-acceder {
+  
+  font-family: Helvetica;
+  background: #1a73e8;
+    
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 16px;
+  padding: 9px 23px;
+  border: 1px solid transparent;
+ 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  vertical-align: middle;
+margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+/* 
+.milka {
+  border-radius: 10px;
+  box-shadow: -1px -1px 5px rgba(0, 0, 0,0.5);
+  position: absolute;
+  top: 48px;
+  right: 10px;
+  padding: 12px;
+  width: 328px;
+  height: 400px;
+  background-color: #676B71;
+  display: none;
+}
+
+.milka.active {
+  display: block;
+} */
+
+/* nav a:link, nav a:visited {
+  display: inline-block;
+  width: 24px;
+  color:rgba(255,255,255,0.87);
+  padding: 10px;
+} */
+
+svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    fill: #676B71;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+
+footer {
+  background: #171717;
+  padding: 20px 0;
+  /* bien */
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+}
+
+form {
+  text-align: center;
+}
+
+.input-holder {
+  display: flex;
+    z-index: 3;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: 638px;
+    max-width: 584px;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    transition: all 0.3s ease-in;
+
+    position: relative;
+}
+
+.historial {
+  position: absolute;
+  top: 26px;
+  background-color: #2f3135;
+  border-radius: 0 0 24px 24px;
+  width: 100%;
+  left: -1px;
+  height: 200px;
+  border: 1px solid #5f6368;
+  border-top: none;
+  z-index: -1;
+  display: none;
+}
+
+.input-holder:hover {
+  /* background: #2f3135; */
+  border: 1px solid #5f6368;
+}
+
+.lupita {
+  width: 20px;
+  color: #9aa0a6;
+}
+
+.botones a:link, .botones a:visited {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.botones img {
+  width: 24px;
+  height: 24px;
+}
+
+.input {
+  flex: 1;
+}
+
+.input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #9aa0a6;
+  font-size: 16px;
+  width: 100%;
+}
+
+.btns-holder a:link, .btns-holder a:visited {
+  background-color: #303134;
+    border: 1px solid #303134;
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+
+.f-top {
+  border-bottom: 1px solid #9aa0a6;
+  padding: 10px;
+  color: #9aa0a6;
+}
+.f-bot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+.f-bot a:link, .f-bot a:visited {
+  color: #9aa0a6;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 5px;
+}
+@media (max-width: 768px) {
+  .f-bot {
     flex-direction: column;
     align-items: center;
-}
-
-header{
-    display: flex;
-    justify-content: right;
-    flex-direction: row;
-}
-
-img{
-padding: 50px;
+  }
+  .f-right {
+    margin-top: 20px;
+  }
 }
