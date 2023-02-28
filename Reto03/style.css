@@ -1,0 +1,121 @@
+
+.header{
+
+display: flex;
+justify-content: center;
+height: 48px;
+width: 100%;
+background: lightskyblue;
+
+}
+
+.notareas{
+    
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
+} 
+
+
+.saludos{
+
+    margin-top: 16px;
+    
+    height: 575px;
+    width: 150px;
+    border: 2px solid black;
+    background: white; 
+    position: absolute;
+    display: none;
+
+}
+
+.firstpage {
+    
+    margin-top: 16px;
+    
+    height: 575px;
+    width: 150px;
+    border: 2px solid black;
+    background: white; 
+    position: absolute;
+    display: block;
+}
+
+/* .firstpage.hide{
+    
+display: none;
+
+} */
+
+/* .titulotaskboard{
+   
+font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+
+.tareitasnone{
+    position: absolute
+    margin-left: 250px;
+    margin-top: 16px;
+    height: 575px;
+    width: 200px;
+    border: 2px solid black;
+    background: lightgoldenrodyellow; 
+
+
+
+
+    display: none;
+}
+
+
+
+
+
+.tareitasvisible{
+
+   
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: block;
+    }
+
+
+
+
+ 
+.boton {
+
+   display:block;
+   width: 70px;
+   height: 70px;
+   background-color: red;
+   border-radius: 50%;
+   /* box-shadow: 0 6px 10px 0 #666; */
+   /* transition: all 0.1s ease-in-out; */
+ 
+   font-size: 50px;
+   color: white;
+   text-align: center;
+   /* line-height: 70px; */
+ 
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+}
+ 
+.boton:hover {
+   /* box-shadow: 0 6px 14px 0 #666; */
+   /* transform: scale(1.05); */
+}
+
+.boton.none{
+
+    display:none;
+  
+}
