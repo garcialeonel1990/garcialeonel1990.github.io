@@ -313,6 +313,7 @@ function limpiarCampos() {
     document.getElementById("memberof").disabled = true;
     SamAccountNameCheckbox.checked = true;
     employeeTypeCheckbox.checked= true;
+    document.getElementById("country").value = "OU=OGAB,OU=Buenos Aires,OU=AR,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv";
   }
 
 
