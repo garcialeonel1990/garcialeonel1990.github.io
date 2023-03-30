@@ -1,0 +1,129 @@
+body{
+margin: 20px;
+}
+
+.exportuser {
+  border: 2px solid lightskyblue;
+  width: 960px;
+  padding: 20px;
+  height: 700px;
+  
+}
+
+.exportuserdesciption {
+    left:1400px;
+    border: 2px solid lightskyblue;
+    width: 300px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 20px;
+    
+  }
+
+#show-export-btn{
+    cursor: pointer;  
+}
+
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    
+    }
+    input[type="submit"] {
+      display: block;
+      
+      cursor: pointer;
+    }
+    textarea {
+        height: 65px;
+        width: 1103px;
+      margin-top: 20px;
+    }
+
+    .opciones{
+        display: flex;
+      margin-bottom: 10px;
+    }
+
+    .opciones label{
+        
+      padding-right: 20px;
+    }
+
+.botoncopiar button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+    top: 670px;
+    left: 442px;
+}
+
+
+
+.closeboton{
+    
+    margin-top: 20px;
+   
+}
+
+.closeboton button{
+
+    display: block;
+    margin: 0 auto;
+    /* margin: 10px; */
+    cursor: pointer;
+    /* position: fixed; */
+    top: 722px;
+    left: 468px;
+   
+}
+
+.botonera{
+    display: flex;
+}
+
+.botonera button{
+    margin-right: 10px;
+}
+
+.boxscript{
+    width: 950px;
+    height: 100px;
+}
+
+.exporttitulo{
+    margin-top: 0px;
+}
+
+.titulo{
+    margin-top: 0px;
+}
+
+.Descripcion{
+
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.exportacion{
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+
+.opciones h4{
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#memberof {
+
+    padding-right: 300px;
+    height: 20px;
+
+}

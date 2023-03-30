@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AD Scripts Tool - v9.0</title>
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <h1>AD Scripts Tool - v9.0</h1>
+
+   
+<div class="botonera">
+    <button id="show-export-btn">Export Users Information</button>
+
+    <button id="show-modify-btn">Modify Users Information</button>
+</div>
+
+<divc class="exportacion">
+  <div class="exportuser"id="exportuser" style="display: none;">
+            <h3 class="titulo">Export Users Information</h3>
+            
+            <form id="adForm">
+                <label for="country">Country - Office:</label>
+
+                <select id="country" name="country">
+                  <option value="OU=OGAB,OU=Buenos Aires,OU=AR,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv">ARG - OGAB</option>
+                  <option value="OU=OGBS,OU=Bogota,OU=CO,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv">COL - OGBS</option>
+                  <option value="OU=ELMN,OU=Miami,OU=US,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv">US - ELMN</option>
+                </select>
+                <br><br>
+              
+              <label for="username">AQ account username:</label>
+              <input type="text" id="username" name="username" >
+              <br><br>
+              <label for="filename">Export filename: (Default: Export.csv)</label>
+              <input type="text" id="filename" name="filename" >
+              <br>  <br>
+
+              <label for="useroptions">User Options:</label>
+          
+              <div class="opciones">
+                <label for="surnameCheckbox">
+                <input type="checkbox" id="surnameCheckbox" name="surnameCheckbox" value="surname" >
+                surname
+                </label>
+
+                <label for="givennameCheckbox">
+                  <input type="checkbox" id="givennameCheckbox" name="givennameCheckbox" value="givenname" >
+                  givenname
+                </label>
+
+                <label for="SamAccountNameCheckbox">
+                    <input type="checkbox" id="SamAccountNameCheckbox" name="SamAccountNameCheckbox" value="SamAccountName" checked>
+                    SamAccountName
+                  </label>
+
+                  <label for="emailCheckbox">
+                    <input type="checkbox" id="emailCheckbox" name="emailCheckbox" value="EmailAddress" >
+                    EmailAddress
+                  </label>
+
+                  <label for="ExpirationTimeCheckbox">
+                    <input type="checkbox" id="ExpirationTimeCheckbox" name="ExpirationTimeCheckbox" value="ExpirationTime" >
+                    ExpirationTime
+                  </label>
+              </div>
+
+
+
+              <div class="opciones">
+              <label for="employeeTypeCheckbox">
+                <input type="checkbox" id="employeeTypeCheckbox" name="employeeTypeCheckbox" value="employeeType" checked>
+                All Employee Type
+              </label>
+              <label for="freelanceruserCheckbox">
+                <input type="checkbox" id="freelanceruserCheckbox" name="freelanceruserCheckbox" value="freelanceruser" disabled>
+                Freelancer User 
+              </label>
+              <label for="permanentuserCheckbox">
+                <input type="checkbox" id="permanentuserCheckbox" name="permanentuserCheckbox" value="permanentuser" disabled>
+                Permanent User 
+              </label>
+            </div>
+
+
+
+
+              <div class="opciones">
+                  <label for="titleCheckbox">
+                    <input type="checkbox" id="titleCheckbox" name="titleCheckbox" value="Title" >
+                    Title
+                  </label>
+                  <label for="departmentCheckbox">
+                    <input type="checkbox" id="departmentCheckbox" name="departmentCheckbox" value="Department" >
+                    Department
+                  </label>
+                  <label for="managerCheckbox">
+                    <input type="checkbox" id="managerCheckbox" name="managerCheckbox" value="@{n='Manager';e={(Get-ADUser $_.manager).name}}" >
+                    Manager
+                  </label>
+              </div>
+
+              
+            
+              <div class="opciones">
+                <label for="OfficeCheckbox">
+                  <input type="checkbox" id="OfficeCheckbox" name="OfficeCheckbox" value="Office" >
+                  Office
+                </label>
+          
+                <label for="StreetAddressCheckbox">
+                  <input type="checkbox" id="StreetAddressCheckbox" name="StreetAddressCheckbox" value="StreetAddress" >
+                  StreetAddress
+                </label>
+          
+                <label for="CityCheckbox">
+                  <input type="checkbox" id="CityCheckbox" name="CityCheckbox" value="City" >
+                  City
+                </label>
+          
+                <label for="CountryCheckbox">
+                  <input type="checkbox" id="CountryCheckbox" name="CountryCheckbox" value="Country" >
+                  Country
+                </label>
+          
+                <label for="PostalCodeCheckbox">
+                  <input type="checkbox" id="PostalCodeCheckbox" name="PostalCodeCheckbox" value="PostalCode" >
+                  PostalCode
+                </label>
+
+              </div>
+                
+                <div class="opciones">
+                  <label>
+                    <input id="habmemberof" type="checkbox" onchange="habilitarInput()"> Member Of
+                  </label>
+                  <br>
+                  <input type="text" id="memberof" disabled>
+                  <h4>*export only members included in this gruop</h4>
+                </div>
+
+
+
+          
+         
+
+             <input type="submit" value="Generate Script"> 
+
+             
+             <div class="botoncopiar">
+              <textarea class="boxscript"id="outputScript"></textarea>         
+               <button id="show-copy-btn" class="copyboton">Copy to Clipboard</button>
+          </div>
+
+        
+            </form>
+
+        
+            <div class="closeboton">
+              <button id="hide-export-btn">Close</button>
+             </div>
+
+
+        
+      
+  </div>
+
+  <div class="exportuserdesciption" id="exportuserdesciption" style="display: none;">
+      <h4 class="titulo">Reparar botones de cerrar y copyclipboard</h4>
+
+  </div>
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+  
+</body>
+</html>  
