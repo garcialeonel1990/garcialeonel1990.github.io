@@ -179,7 +179,7 @@ if (inputHabilitado & texto===""){
   
   }else{
 
-    codigoallusers=  `Get-ADUser -Filter Enabled -eq 'True' `;
+    codigoallusers=  `Get-ADUser -Filter "Enabled -eq 'True'" `;
     grupo=""
     filtrogrupos=""
   }
