@@ -1,81 +1,187 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>AD Scripts Tool - v9.0</title>
 
-    <!-- Primary Meta Tags -->
-    <title>Leonel Garcia Developer</title>
-    <link rel="shortcut icon" href="images/logo_sd.png" />
-
-    <meta name="title" content="Leonel Garcia Developer">
-    <meta name="description" content="Hola mi nombre es Leonel Garcia, soy de Lanús, estudio Ingeniería Electrónica. Trabajo como soporte IT en una empresa líder en producción digital (Hogarth).Como hobbies me gusta disfrutar de la música en vivo tocada por seres humanos, coleccionar música en formato físico y pines. Me uní al SummerHack para expandir mis conocimientos de programación a otros lenguajes más enfocados en el desarrollo web.">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://garcialeonel1990.github.io/">
-    <meta property="og:title" content="Leonel Garcia Developer">
-    <meta property="og:description" content="Hola mi nombre es Leonel Garcia, soy de Lanús, estudio Ingeniería Electrónica. Trabajo como soporte IT en una empresa líder en producción digital (Hogarth).Como hobbies me gusta disfrutar de la música en vivo tocada por seres humanos, coleccionar música en formato físico y pines. Me uní al SummerHack para expandir mis conocimientos de programación a otros lenguajes más enfocados en el desarrollo web.">
-    <meta property="og:image" content="https://garcialeonel1990.github.io/images/logo_sd.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://garcialeonel1990.github.io/">
-    <meta property="twitter:title" content="Leonel Garcia Developer">
-    <meta property="twitter:description" content="Hola mi nombre es Leonel Garcia, soy de Lanús, estudio Ingeniería Electrónica. Trabajo como soporte IT en una empresa líder en producción digital (Hogarth).Como hobbies me gusta disfrutar de la música en vivo tocada por seres humanos, coleccionar música en formato físico y pines. Me uní al SummerHack para expandir mis conocimientos de programación a otros lenguajes más enfocados en el desarrollo web.">
-    <meta property="twitter:image" content="https://garcialeonel1990.github.io/images/logo_sd.png">
+  <link rel="stylesheet" href="style.css">
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-   
-    
 </head>
-
 <body>
-    <main class="container">
 
-        <header>
+    <h1>AD Scripts Tool - v9.0</h1>
 
-            <img class="logo" src="images/logo_hd.png" alt="Logo">
-            <p class="url_logo">@leonelgarcia_dev</p>
+   
+<div class="botonera">
+    <button id="show-export-btn">Export Users Information</button>
 
-            <nav class="icons">
-                <a href="https://www.linkedin.com/in/garcialeonel1990/" target="_blank">
-                    <img src="images/linkedin.png" alt="Linkedin"></a>
-                <a href="https://www.instagram.com/leonelgarcia_dev/" target="_blank">
-                    <img src="images/instagram.png" alt="Instagram"></a>
-                <a href="https://github.com/garcialeonel1990" target="_blank">
-                    <img src="images/github.png" alt="GitHub"></a>
-                <a href="mailto:garcialeonel1990@gmial.com">
-                    <img src="images/mail.png" alt="Email"></a>
-            </nav>
+    <button id="show-modify-btn">Modify Users Information</button>
+</div>
 
-        </header>
+<divc class="exportacion">
+  <div class="exportuser"id="exportuser" style="display: none;">
+            <h3 class="titulo">Export Users Information</h3>
+            
+            <form id="adForm">
+                <label for="country">Country - Office:</label>
 
-        <div class="description">
-            <p> Hola mi nombre es Leonel Garcia, soy de Lanús, estudio Ingeniería Electrónica. Trabajo como soporte IT en una empresa líder en producción digital (Hogarth).Como hobbies me gusta disfrutar de la música en vivo tocada por seres humanos, coleccionar música en formato físico y pines.
-                Me uní al SummerHack para expandir mis conocimientos de programación a otros lenguajes más enfocados en el desarrollo web. </p>
-        </div>
+                <select id="country" name="country">
+                  <option value="OU=OGAB,OU=Buenos Aires,OU=AR,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv">ARG - OGAB</option>
+                  <option value="OU=OGBS,OU=Bogota,OU=CO,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv">COL - OGBS</option>
+                  <option value="OU=ELMN,OU=Miami,OU=US,OU=AMER,OU=Users,OU=HogarthWW,DC=hogarthww,DC=prv">US - ELMN</option>
+                </select>
+                <br><br>
+              
+              <label for="username">AQ account username:</label>
+              <input type="text" id="username" name="username" >
+              <br><br>
+              <label for="filename">Export filename: (Default: Export.csv)</label>
+              <input type="text" id="filename" name="filename" >
+              <br>  <br>
+
+              <label for="useroptions">User Options:</label>
+          
+              <div class="opciones">
+                <label for="surnameCheckbox">
+                <input type="checkbox" id="surnameCheckbox" name="surnameCheckbox" value="surname" >
+                surname
+                </label>
+
+                <label for="givennameCheckbox">
+                  <input type="checkbox" id="givennameCheckbox" name="givennameCheckbox" value="givenname" >
+                  givenname
+                </label>
+
+                <label for="SamAccountNameCheckbox">
+                    <input type="checkbox" id="SamAccountNameCheckbox" name="SamAccountNameCheckbox" value="SamAccountName" checked>
+                    SamAccountName
+                  </label>
+
+                  <label for="emailCheckbox">
+                    <input type="checkbox" id="emailCheckbox" name="emailCheckbox" value="EmailAddress" >
+                    EmailAddress
+                  </label>
+
+                  <label for="ExpirationTimeCheckbox">
+                    <input type="checkbox" id="ExpirationTimeCheckbox" name="ExpirationTimeCheckbox" value="ExpirationTime" >
+                    ExpirationTime
+                  </label>
+              </div>
+
+
+
+              <div class="opciones">
+              <label for="employeeTypeCheckbox">
+                <input type="checkbox" id="employeeTypeCheckbox" name="employeeTypeCheckbox" value="employeeType" checked>
+                All Employee Type
+              </label>
+              <label for="freelanceruserCheckbox">
+                <input type="checkbox" id="freelanceruserCheckbox" name="freelanceruserCheckbox" value="freelanceruser" disabled>
+                Freelancer User 
+              </label>
+              <label for="permanentuserCheckbox">
+                <input type="checkbox" id="permanentuserCheckbox" name="permanentuserCheckbox" value="permanentuser" disabled>
+                Permanent User 
+              </label>
+            </div>
+
+
+
+
+              <div class="opciones">
+                  <label for="titleCheckbox">
+                    <input type="checkbox" id="titleCheckbox" name="titleCheckbox" value="Title" >
+                    Title
+                  </label>
+                  <label for="departmentCheckbox">
+                    <input type="checkbox" id="departmentCheckbox" name="departmentCheckbox" value="Department" >
+                    Department
+                  </label>
+                  <label for="managerCheckbox">
+                    <input type="checkbox" id="managerCheckbox" name="managerCheckbox" value="@{n='Manager';e={(Get-ADUser $_.manager).name}}" >
+                    Manager
+                  </label>
+              </div>
+
+              
+            
+              <div class="opciones">
+                <label for="OfficeCheckbox">
+                  <input type="checkbox" id="OfficeCheckbox" name="OfficeCheckbox" value="Office" >
+                  Office
+                </label>
+          
+                <label for="StreetAddressCheckbox">
+                  <input type="checkbox" id="StreetAddressCheckbox" name="StreetAddressCheckbox" value="StreetAddress" >
+                  StreetAddress
+                </label>
+          
+                <label for="CityCheckbox">
+                  <input type="checkbox" id="CityCheckbox" name="CityCheckbox" value="City" >
+                  City
+                </label>
+          
+                <label for="CountryCheckbox">
+                  <input type="checkbox" id="CountryCheckbox" name="CountryCheckbox" value="Country" >
+                  Country
+                </label>
+          
+                <label for="PostalCodeCheckbox">
+                  <input type="checkbox" id="PostalCodeCheckbox" name="PostalCodeCheckbox" value="PostalCode" >
+                  PostalCode
+                </label>
+
+              </div>
+                
+                <div class="opciones">
+                  <label>
+                    <input id="habmemberof" type="checkbox" onchange="habilitarInput()"> Member Of
+                  </label>
+                  <br>
+                  <input type="text" id="memberof" disabled>
+                  <h4>*export only members included in this gruop</h4>
+                </div>
+
+
+
+          
+         
+
+             <input type="submit" value="Generate Script"> 
+
+             
+             <div class="botoncopiar">
+              <textarea class="boxscript"id="outputScript"></textarea>         
+               <button id="show-copy-btn" class="copyboton">Copy to Clipboard</button>
+          </div>
+
         
-         <ul class="btn">
-            <li><a href="https://garcialeonel1990.github.io/Reto02/index.html" target="_blank">Clone Google</a></li>
-            <li><a href="https://open.spotify.com/playlist/6i4dCXvbxu2wRteINpfPuI?si=M6HWj1kXTAm5QpebIrOmjQ" target="_blank">Mi Playlist</a></li>
-            <li><a href="https://www.codearock.com/" target="_blank">CodeaRock</a></li>
-        </ul>
+            </form>
+
+        
+            <div class="closeboton">
+              <button id="hide-export-btn">Close</button>
+             </div>
 
 
-        <footer >
-            <hr>
-            <p class="copyright">©SummerHack2023</p>
-        </footer>
+        
+      
+  </div>
 
-    </main>
+  <div class="exportuserdesciption" id="exportuserdesciption" style="display: none;">
+      <h4 class="titulo">Reparar botones de cerrar y copyclipboard</h4>
 
+  </div>
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+  
 </body>
-
-</html>
+</html>  
