@@ -309,6 +309,10 @@ function limpiarCampos() {
         campo.value = '';
       }
     });
+
+    document.getElementById("memberof").disabled = true;
+    SamAccountNameCheckbox.checked = true;
+    employeeTypeCheckbox.checked= true;
   }
 
 
