@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extractor de Enlaces</title>
+    <script>
+        function extractLinks(url, addPrefix) {
+            var linkContainer = document.getElementById("linkContainer");
+            linkContainer.innerHTML = ""; // Limpiar el contenido previo
+
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(data, "text/html");
+                    var links = doc.querySelectorAll("a[href], img[src]");
+
+                    links.forEach(link => {
+                        var linkAttr = link.hasAttribute("href") ? "href" : "src";
+                        var linkValue = link.getAttribute(linkAttr);
+
+                        var linkElement = document.createElement("p");
+                        linkElement.textContent = linkValue;
+
+                        var searchButton = document.createElement("button");
+                        searchButton.textContent = "Buscar Enlaces";
+                        searchButton.addEventListener("click", function() {
+                            extractLinks(linkValue, false);
+                        });
+
+                        linkElement.appendChild(searchButton);
+                        linkContainer.appendChild(linkElement);
+                    });
+                })
+                .catch(error => {
+                    linkContainer.textContent = "Error al cargar la página: " + error.message;
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>Extractor de Enlaces</h1>
+    <input type="text" id="urlInput" placeholder="Ingresa una URL">
+    <button onclick="extractLinks(document.getElementById('urlInput').value, false)">Extraer Enlaces</button>
+    <div id="linkContainer"></div>
+</body>
+</html>
